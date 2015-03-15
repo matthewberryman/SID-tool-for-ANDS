@@ -1,4 +1,4 @@
-# 0. Introduction
+# Introduction
 
 This file describes small tools designed and used for the SMART
 Infrastructure Dashboard (SID) project funded by the Australian
@@ -8,21 +8,24 @@ The SID project needs to extract information from MS Excel
 files. These files are collected from the collaborators. Most of these
 files are in MS Excel 2003 or previous version format.
 
-These files include: - Australian Bureau of Statistics Community Basic
-Profiles - Australian Bureau of Meteorology Weather Records -
-Infrastructure utility consumptions, assets, and technical reports
+These files include: - Australian Bureau of Statistics Community Basic Profiles - Australian Bureau of Meteorology Weather Records - Infrastructure utility consumptions, assets, and technical reports
 
-This project creates small tools for the SID project use only,
-although these tools can be further developed for general-purpose
-usage. Hence, these tools are designed for completing the on-demand
-SID data processing tasks as simple as possible. It is NOT developed
-following the design and development rules of a productive
+This project creates small tools for the SID project use only, although these tools can be further developed for general-purpose usage. Hence, these tools are designed for completing the on-demand SID data processing tasks as simple as possible. It is NOT developed following the design and development rules of a productive
 software. Modification may be needed for other usage.
 
-Due to no guarantee for any data demage, please make a copy of your
-data before using them.
+Due to no guarantee for any data damage, please make a copy of your data before using them.
 
-# 1. Directory Tree Structure
+# Build instructions
+To build run
+```bash
+mvn clean install
+```
+To remove build products run
+```bash
+mvn clean
+```
+
+# Directory Tree Structure
 
 The *dashboard* folder contains source codes of small tools for
 extracting data from the Australian Bureau of Statistics (ABS) census
@@ -52,7 +55,7 @@ files.
            |-- sheet-cells.txt		// extracted sheet and cell indexes
            +-- stn-rainfall.txt		// weather station list from BOM
 
-NOTE: 
+NOTE:
     . Except the "stn-rainfall.txt" file, other files are used for the
     dashboard tool.
     . Example of using the dashboard tool:
@@ -64,21 +67,18 @@ The *scripts* folder contains a Linux Bash script to download weather
 records from the Australian Bureau of Meteorology (BoM).
 
     +-- scripts
-           |__ get-bom-data.sh	        
+           |__ get-bom-data.sh
 
 NOTE: This is a Linux Bash script to extract BOM history weather
 records (rainfall and temperature). Please refer the script for usage.
 
 The *Readme.txt* is this file.
 
-2. JDK and External Libraries
------------------------------
+# JDK and External Libraries
 
-These tools are developed in Java SE version 6. It uses the Apache POI
-library to handle Excel files.
+These tools are developed in Java SE version 6. It uses the Apache POI library to handle Excel files.
 
-3. Copyright and License Issues
--------------------------------
+# Copyright and License Issues
 
 Copyright &copy; 2013-2014, SMART Infrastructure Facility, University of Wollongong.
 
@@ -106,12 +106,12 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# 4. Feedback
+# Feedback
 
 We sincerely appreciate your valuable feedback. Any comments and
 suggestions please contact:
-    
-    Professor Pascal Perez <pascal@uow.edu.au> 
+
+    Professor Pascal Perez <pascal@uow.edu.au>
     Research Director
     SMART Infrastructure Facility
-    University of Wollongong 
+    University of Wollongong
