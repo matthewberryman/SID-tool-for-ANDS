@@ -115,3 +115,7 @@ suggestions please contact:
     Research Director
     SMART Infrastructure Facility
     University of Wollongong
+
+# Funding
+
+We gratefully acknowledge funding from ANDS, the [Australian National Data Service](http://ands.org.au).    
